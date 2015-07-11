@@ -1,0 +1,35 @@
+AccessorMethodName:
+  Enabled: false
+
+Alias:
+  Enabled: false
+
+ClassLength:
+  Max: 120
+
+BlockDelimiters:
+  Enabled: false
+
+CollectionMethods:
+  PreferredMethods:
+    collect: 'map'
+    collect!: 'map!'
+    inject: 'reduce'
+    detect: 'find'
+    find_all: 'select'
+
+Documentation:
+  Enabled: false
+
+LineLength:
+  Max: 120
+
+MethodLength:
+  Max: 30
+
+HasAndBelongsToMany:
+  Enabled: false
+
+TrivialAccessors:
+  Enabled: true
+  ExactNameMatch: true
