@@ -2,6 +2,7 @@ require 'yaml'
 require 'open-uri'
 require 'zip'
 require 'csv'
+require 'logging'
 
 module I18nCityTranslations
   class ImportLocode
@@ -10,6 +11,7 @@ module I18nCityTranslations
 
     def initialize(locale = nil)
       @locale = locale
+      @logger = Logging.logger(STDOUT)
     end
 
     def process
@@ -30,7 +32,7 @@ module I18nCityTranslations
       File.open(EXPORT_DIRECTORY.to_s + '/export.zip', 'wb') do |f|
         open(EXPORT_FILE, 'rb') do |export|
           f.write export.read
-          puts '--- File downloaded ---'
+          @logger.info '--- File downloaded ---'
         end
       end
     end
@@ -42,7 +44,7 @@ module I18nCityTranslations
           zip_file.extract(f, f_path) if f.name =~ /.CodelistPart[0-9]\.csv$/i
         end
       end
-      puts '--- File extracted ---'
+      @logger.info '--- File extracted ---'
     end
 
     def read_files
@@ -52,7 +54,7 @@ module I18nCityTranslations
     def cities
       cities = {}
       read_files.each do |file|
-        puts "--- Read and write from #{file} ---"
+        @logger.info "--- Read and write from #{file} ---"
         CSV.foreach(file, encoding: 'ISO-8859-1') do |row|
           cities[row[1] + row[2]] = row[3] unless row[2].nil? || row[0] == '='
         end

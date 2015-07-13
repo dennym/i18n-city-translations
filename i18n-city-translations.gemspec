@@ -29,6 +29,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'webmock'
   s.add_development_dependency 'simplecov'
   s.add_development_dependency 'rubyzip'
+  s.add_development_dependency 'logging'
 
   s.licenses = ['MIT', 'GPL-2']
 end
