@@ -21,18 +21,18 @@ Add to your Gemfile:
 
 ## Usage
 
-  I18n.t(:DEBER, :scope => :cities)
+    I18n.t(:DEBER, :scope => :cities)
 
 or
 
-  t(:DEBER, :scope => :cities)
+    t(:DEBER, :scope => :cities)
 
 ## Contributing
 
 The locales were generated using this rake task which you might find useful somehow:
 
-  IMPORT_LOCALE=en rake import:city_import
-  IMPORT_LOCALE=en rake import:city_translation
+    IMPORT_LOCALE=en rake import:city_import
+    IMPORT_LOCALE=en rake import:city_translation
 
 It will generate a new yml file that contains the all cities from the export of UN/LoCode for the locale specified. Please note that some of the country translations may still be missing.
 
