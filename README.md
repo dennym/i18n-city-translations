@@ -1,4 +1,4 @@
-# I18nCityTranslations
+# I18nCityTranslations !!! WIP No correct translation available yet !!!
 
 [![Build Status](https://travis-ci.org/dennym/i18n-city-translations.svg)](https://travis-ci.org/dennym/i18n-city-translations)
 
