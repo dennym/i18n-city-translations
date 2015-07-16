@@ -21,6 +21,7 @@ Dir.glob('rails/locale/iso_639-1/*.yml') do |locale_file|
         keys = translations[locale.to_sym][:cities].keys
 
         keys.each do |city_code|
+          puts city_code
           expect(I18n.t(city_code, scope: :cities, separator: '\001')).to_not eq city_code
           expect(I18n.t(city_code, scope: :cities, separator: '\001').include?('translation missing')).to be_falsy
         end
