@@ -4,7 +4,7 @@ module I18nCityTranslations
   class Railtie < ::Rails::Railtie #:nodoc:
     initializer 'i18n-city-translations' do |app|
       I18nCityTranslations::Railtie.instance_eval do
-        pattern = pattern_from app.config.i18n.available_locales
+        pattern = pattern_from I18n.available_locales
 
         add("rails/locale/**/#{pattern}.yml")
       end
