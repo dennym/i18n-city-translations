@@ -32,7 +32,8 @@ or
 The locales were generated using this rake task which you might find useful somehow:
 
     IMPORT_LOCALE=en rake import:city_import
-    IMPORT_LOCALE=en rake import:city_translation
+    IMPORT_LOCALE=en rake import:geonames_import
+    IMPORT_LOCALE=en rake import:translate_city
 
 It will generate a new yml file that contains the all cities from the export of UN/LoCode for the locale specified. Please note that some of the country translations may still be missing.
 
