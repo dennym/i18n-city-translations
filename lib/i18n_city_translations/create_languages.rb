@@ -23,7 +23,7 @@ module I18nCityTranslations
         end
       end
 
-      FileUtils.rm_rf('tmp/.')
+      FileUtils.rm_rf('tmp/cloned_repo')
     end
 
     def change_language(data, file, locale)
