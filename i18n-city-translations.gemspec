@@ -20,9 +20,9 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.platform     = Gem::Platform::RUBY
 
-  s.add_dependency('i18n', '0.7.0')
-  s.add_dependency 'railties', '4.2.2'
-  s.add_development_dependency 'rails', '4.2.2'
+  s.add_dependency('i18n', '>= 1.0.0')
+  s.add_dependency 'railties', '>= 4.2.2'
+  s.add_development_dependency 'rails', '>= 4.2.2'
   s.add_development_dependency 'rspec-rails'
   s.add_development_dependency 'i18n-spec'
   s.add_development_dependency 'rubocop'
