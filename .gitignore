@@ -9,3 +9,4 @@ test/dummy/.sass-cache
 tmp/*
 coverage/
 rails/locale/**/*.yml.OLD
+.DS_Store
